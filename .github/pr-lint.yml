@@ -1,0 +1,24 @@
+## MANAGED BY TERRAFORM - DO NOT MANUALLY EDIT
+projects:
+  - 'BUG'
+  - 'COD'
+  - 'DEL'
+  - 'FIN'
+  - 'FR'
+  - 'IN'
+  - 'PI'
+  - 'PL'
+  - 'POL'
+  - 'PRO'
+  - 'PS'
+  - 'REM'
+  - 'TA'
+  - 'TEA'
+  - 'APP'
+  - 'INBUG'
+  - 'POV'
+  - 'ING'
+  - 'ENR'
+check_title: true
+check_branch: false
+check_commits: false
