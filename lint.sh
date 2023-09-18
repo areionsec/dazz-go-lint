@@ -1,9 +1,10 @@
 #!/bin/sh
 
 DEFAULT_CONFIG_FILE_URL="https://raw.githubusercontent.com/areionsec/dazz-go-lint/master/.golangci.yml"
-DEFAULT_GOLANGCI_LINT_VERSION="v1.54.2"
+DEFAULT_GOLANGCI_LINT_VERSION=v1.54.2
 REMOTE_CONFIG_FILE_URL="$1"
-GOLANGCI_LINT_VERSION="$2"
+GOLANGCI_LINT_VERSION_STR="$2"
+GOLANGCI_LINT_VERSION=$2
 
 if [[ -z "$REMOTE_CONFIG_FILE_URL" ]]; then
    # No custom remote config URL, set to default
@@ -16,14 +17,15 @@ fi
 if [[ -z "$GOLANGCI_LINT_VERSION" ]]; then
    # No custom remote config URL, set to default
    echo "No 'golangci-lint' version is provided, using: $DEFAULT_GOLANGCI_LINT_VERSION"
-   GOLANGCI_LINT_VERSION=DEFAULT_GOLANGCI_LINT_VERSION
+   GOLANGCI_LINT_VERSION=$DEFAULT_GOLANGCI_LINT_VERSION
+   GOLANGCI_LINT_VERSION_STR="$DEFAULT_GOLANGCI_LINT_VERSION"
 else
   echo "Using provided golangci-lint version: $GOLANGCI_LINT_VERSION"
 fi
 
-if [ "$($(go env GOPATH)/bin/golangci-lint version | awk '{print $4}' )" != $GOLANGCI_LINT_VERSION ]; then
+if [ "$($(go env GOPATH)/bin/golangci-lint version | awk '{print $4}' )" != $GOLANGCI_LINT_VERSION_STR ]; then
     echo "[+] Installing golangci-lint"
-    curl -sSfL $ https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin $GOLANGCI_LINT_VERSION
+    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin $GOLANGCI_LINT_VERSION
 fi
 
 echo "[+] Running golangci-lint"
