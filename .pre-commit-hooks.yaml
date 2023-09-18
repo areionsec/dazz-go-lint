@@ -1,0 +1,7 @@
+- id: dazz-go-lint
+  name: dazz-go--lint
+  entry: lint.sh
+  types: [go]
+  language: script
+  pass_filenames: false
+  description: "Runs `golangci-lint` with a remote `.golangci.yml`, and `go mod tidy`."
