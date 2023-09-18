@@ -1,0 +1,1 @@
+# dazz-go-lint
