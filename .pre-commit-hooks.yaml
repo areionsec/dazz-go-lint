@@ -1,5 +1,5 @@
 - id: dazz-go-lint
-  name: dazz-go--lint
+  name: dazz-go-lint
   entry: lint.sh
   types: [go]
   language: script
