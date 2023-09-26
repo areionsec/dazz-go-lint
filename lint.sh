@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+set -eu -o pipefail
 
 DEFAULT_CONFIG_FILE_URL="https://raw.githubusercontent.com/areionsec/dazz-go-lint/master/.golangci.yml"
 DEFAULT_GOLANGCI_LINT_VERSION=v1.54.2
@@ -30,7 +32,7 @@ fi
 
 echo "[+] Running golangci-lint"
 
-curl -H "Authorization: token $GITHUB_TOKEN" -L $REMOTE_CONFIG_FILE_URL -o ".golangci.yml"
+curl -H "Authorization: token $GITHUB_TOKEN" -L $REMOTE_CONFIG_FILE_URL -o ".golangci.yml" --fail
 
 $(go env GOPATH)/bin/golangci-lint run -v
 
