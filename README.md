@@ -13,7 +13,7 @@ To add it to your repository, add the following to your `.pre-commit-config.yaml
 ```yaml
 repos:
   - repo: https://github.com/areionsec/dazz-go-lint
-    rev: 1.0.0
+    rev: v2.0.0
     hooks:
       - id: dazz-go-lint
         args: [
