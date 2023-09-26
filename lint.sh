@@ -32,7 +32,7 @@ fi
 
 echo "[+] Running golangci-lint"
 
-curl -H "Authorization: token $GITHUB_TOKEN" -L $REMOTE_CONFIG_FILE_URL -o ".golangci.yml"
+curl -H "Authorization: token $GITHUB_TOKEN" -L $REMOTE_CONFIG_FILE_URL -o ".golangci.yml" --fail
 
 $(go env GOPATH)/bin/golangci-lint run -v
 
