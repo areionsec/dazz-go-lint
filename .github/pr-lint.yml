@@ -19,6 +19,7 @@ projects:
   - 'POV'
   - 'ING'
   - 'ENR'
+  - 'SOL'
 check_title: true
 check_branch: false
 check_commits: false
