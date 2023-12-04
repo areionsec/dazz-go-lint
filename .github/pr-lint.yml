@@ -1,4 +1,4 @@
-## MANAGED BY TERRAFORM - DO NOT MANUALLY EDIT
+## MANAGED BY TERRAFORM - MANUALLY EDIT ONLY IN https://github.com/areionsec/infrastructure/blob/master/modules/default-repository/managed_files_repo_root/.github/pr-lint.yml
 projects:
   - 'BUG'
   - 'COD'
@@ -20,6 +20,7 @@ projects:
   - 'ING'
   - 'ENR'
   - 'SOL'
+  - 'ARC'
 check_title: true
 check_branch: false
 check_commits: false
