@@ -1,27 +1,29 @@
 ## MANAGED BY TERRAFORM - MANUALLY EDIT ONLY IN https://github.com/areionsec/infrastructure/blob/master/modules/default-repository/managed_files_repo_root/.github/pr-lint.yml
 projects:
-  - 'APP'
-  - 'ARC'
-  - 'BUG'
-  - 'COD'
-  - 'DEL'
-  - 'ENR'
-  - 'FIN'
-  - 'FR'
-  - 'IDEA'
-  - 'IN'
-  - 'ING'
-  - 'INBUG'
-  - 'PI'
-  - 'PL'
-  - 'POL'
-  - 'POV'
-  - 'PRO'
-  - 'PS'
-  - 'REM'
-  - 'SOL'
-  - 'TA'
-  - 'TEA'
+  - APP
+  - ARC
+  - BUG
+  - COD
+  - DEL
+  - ENR
+  - FIN
+  - FR
+  - IDEA
+  - IN
+  - INBUG
+  - ING
+  - PI
+  - PL
+  - POL
+  - POV
+  - PRO
+  - PS
+  - REM
+  - RES
+  - SOL
+  - TA
+  - TEA
+  - WM
 check_title: true
 check_branch: false
 check_commits: false
