@@ -1,4 +1,5 @@
-## MANAGED BY TERRAFORM - MANUALLY EDIT ONLY IN https://github.com/areionsec/infrastructure/blob/master/modules/default-repository/managed_files_repo_root/.github/pr-lint.yml
+## MANAGED BY TERRAFORM - MANUALLY EDIT ONLY IN
+## https://github.com/areionsec/terraform-aws-areion-components/blob/master/modules/resource-wrapper_github_repository/templates/managed_files_repo_root/dot_github/pr-lint.yml
 projects:
   - APP
   - ARC
@@ -24,6 +25,8 @@ projects:
   - TA
   - TEA
   - WM
+  - INTEG
+  - DBG
 check_title: true
 check_branch: false
 check_commits: false
