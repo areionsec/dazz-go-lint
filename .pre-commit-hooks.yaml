@@ -5,3 +5,10 @@
   language: script
   pass_filenames: false
   description: "Runs `golangci-lint` with a remote `.golangci.yml`, and `go mod tidy`."
+- id: grpc-lint
+  name: grpc-lint
+  entry: grpc-lint.sh
+  types: [go]
+  language: script
+  pass_filenames: false
+  description: "Runs Dazz specific gRPC linter."
